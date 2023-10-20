@@ -1,0 +1,15 @@
+.custom-input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 30%;
+}
+
+button {
+    margin-top: 20px;
+}

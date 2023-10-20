@@ -1,0 +1,40 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Jose",
+      "idade": 35,
+      "perfil:": "Administrador"
+    },
+    {
+      "id": 2,
+      "nome": "Joaquim",
+      "idade": 30,
+      "perfil:": "Diretor"
+    },
+    {
+      "id": 3,
+      "nome": "João",
+      "idade": 25,
+      "perfil:": "Programador"
+    },
+    {
+      "id": 4,
+      "nome": "Jairo",
+      "idade": 20,
+      "perfil:": "Estagiário"
+    },
+    {
+      "id": 5,
+      "nome": "Juarez",
+      "idade": 15,
+      "perfil:": "Office-boy"
+    },
+    {
+      "id": 6,
+      "nome": "1",
+      "idade": "1",
+      "perfil": "1"
+    }
+  ]
+}

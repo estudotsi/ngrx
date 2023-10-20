@@ -1,0 +1,22 @@
+<h2 class="text-center">Usuários</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Perfil</th>
+            <th scope="col">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.idade }}</td>
+            <td>{{ usuario.perfil }}</td>
+            <td><button class="btn btn-primary">Ação</button></td>
+        </tr>
+
+    </tbody>
+</table>
