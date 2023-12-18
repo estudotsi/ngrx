@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/models/usario';
+import { UsuarioModel } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/repository/usuario.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { UsuarioService } from 'src/app/repository/usuario.service';
 })
 export class CadastroUsuariosComponent implements OnInit {
 
-  model: Usuario = {id: 0, nome: '', idade: 0, perfil: ''};
+  model: UsuarioModel = {id: 0, nome: '', idade: 0, perfil: ''};
 
   constructor(private usuarioService: UsuarioService) { }
 

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Usuario } from '../models/usario';
+import { UsuarioModel } from '../models/usuario.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,23 +12,23 @@ export class UsuarioService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getUsuarios(): Observable<Usuario[]>{
-    return this.httpClient.get<Usuario[]>(this.url);
+  getUsuarios(): Observable<UsuarioModel[]>{
+    return this.httpClient.get<UsuarioModel[]>(this.url);
   }
 
-  getUsuario(id: number): Observable<Usuario>{
-    return this.httpClient.get<Usuario>(`${this.url}/${id}`);
+  getUsuario(id: number): Observable<UsuarioModel>{
+    return this.httpClient.get<UsuarioModel>(`${this.url}/${id}`);
   }
 
-  addUsuario(usuario: Usuario): Observable<Usuario>{
-    return this.httpClient.post<Usuario>(this.url, usuario);
+  addUsuario(usuario: UsuarioModel): Observable<UsuarioModel>{
+    return this.httpClient.post<UsuarioModel>(this.url, usuario);
   }
 
-  updateUsuario(usuario: Usuario, id: number): Observable<Usuario>{
-    return this.httpClient.put<Usuario>(`${this.url}/${id}`, usuario);
+  updateUsuario(usuario: UsuarioModel, id: number): Observable<UsuarioModel>{
+    return this.httpClient.put<UsuarioModel>(`${this.url}/${id}`, usuario);
   }
 
-  deleteUsuario(id: number): Observable<Usuario>{
-    return this.httpClient.delete<Usuario>(`${this.url}/${id}`);
+  deleteUsuario(id: number): Observable<UsuarioModel>{
+    return this.httpClient.delete<UsuarioModel>(`${this.url}/${id}`);
   }
 }

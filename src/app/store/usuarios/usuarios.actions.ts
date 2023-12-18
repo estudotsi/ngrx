@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Usuario } from 'src/app/models/usario';
+import { UsuarioModel } from 'src/app/models/usuario.model';
 
 export const enum usuariosTypeActions{
 
@@ -29,7 +29,7 @@ export const LoadUsuarios = createAction(usuariosTypeActions.LOAD_USUARIOS
   );
 
 export const LoadUsuariosSuccess = createAction(usuariosTypeActions.LOAD_USUARIOS_SUCCESS,
-  props<{payload: Usuario[]}>()
+  props<{payload: UsuarioModel[]}>()
   );
 
 export const LoadUsuariosFail = createAction(usuariosTypeActions.LOAD_USUARIOS_FAIL,
@@ -41,7 +41,7 @@ export const LoadUsuario = createAction(usuariosTypeActions.LOAD_USUARIO,
   );
 
 export const LoadUsuarioSuccess = createAction(usuariosTypeActions.LOAD_USUARIO_SUCCESS,
-  props<{payload: Usuario}>()
+  props<{payload: UsuarioModel}>()
   );
 
 export const LoadUsuarioFail = createAction(usuariosTypeActions.LOAD_USUARIO_FAIL,
@@ -49,11 +49,11 @@ export const LoadUsuarioFail = createAction(usuariosTypeActions.LOAD_USUARIO_FAI
   );
 
 export const CreateUsuario = createAction(usuariosTypeActions.CREATE_USUARIO,
-  props<{payload: Usuario}>()
+  props<{payload: UsuarioModel}>()
   );
 
 export const CreateUsuarioSucces = createAction(usuariosTypeActions.CREATE_USUARIO_SUCCESS,
-  props<{payload: Usuario}>()
+  props<{payload: UsuarioModel}>()
   );
 
 export const CreateUsuarioFail = createAction(usuariosTypeActions.CREATE_USUARIO_FAIL,
@@ -61,11 +61,11 @@ export const CreateUsuarioFail = createAction(usuariosTypeActions.CREATE_USUARIO
   );
 
 export const UpdateUsuario = createAction(usuariosTypeActions.UPDATE_USUARIO,
-  props<{payload: Usuario}>()
+  props<{payload: UsuarioModel}>()
   );
 
 export const UpdateUsuarioSucces = createAction(usuariosTypeActions.UPDATE_USUARIO_SUCCESS,
-  props<{payload: Usuario}>()
+  props<{payload: UsuarioModel}>()
   );
 
 export const UpdateUsuarioFail = createAction(usuariosTypeActions.UPDATE_USUARIO_FAIL,

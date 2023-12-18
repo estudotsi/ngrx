@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { error } from 'console';
-import { Usuario } from 'src/app/models/usario';
+import { UsuarioModel } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/repository/usuario.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { UsuarioService } from 'src/app/repository/usuario.service';
 })
 export class ListarUsuariosComponent implements OnInit {
 
-  usuarios?: Usuario[];
+  usuarios?: UsuarioModel[];
 
   constructor(private usuarioService: UsuarioService) { }
 
@@ -20,7 +20,7 @@ export class ListarUsuariosComponent implements OnInit {
 
   public carregarUsuarios(): void{
     this.usuarioService.getUsuarios().subscribe({
-      next: (usuariosRecebidos: Usuario[]) => {
+      next: (usuariosRecebidos: UsuarioModel[]) => {
         this.usuarios = usuariosRecebidos;
       },
       error: (error: any) => {
